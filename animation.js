@@ -22,7 +22,7 @@ canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
 // a color pallet to choose from
-color1 = ['#F3FEB0', '#FEA443', '#705E78', '#A5AAA3', '#0812F33']
+color1 = ['#F3FEB0', '#FEA443', '#705E78', '#A5AAA3', '#812F33']
 color2 = ['#FBA922', '#F0584A', '#2B5877', '#1194A8', '#1FC7B7']
 color3 = ['#66D1D1', '#48A2A3', '#115569', '#FCE66F', '#FFFAE8']
 color4 = ['#BF303C', '#082640', '#D9BA82', '#F2522E', '#D92323']
@@ -107,7 +107,7 @@ function animate(){
     };
 }
 
-// generate a randomg integer inside a range
+// generate a random integer inside a range
 function getRandomIntFromRange(min, max){
     return Math.floor(Math.random()*(max-min+1)+min);
 };
@@ -125,8 +125,8 @@ function init(){
         the direction on edge contact */
         let particleRadius = getRandomIntFromRange(minRadius, maxRadius);
 
-        x = getRandomIntFromRange((0+particleRadius), (innerWidth-particleRadius));
-        y = getRandomIntFromRange((0+particleRadius), (innerHeight-particleRadius));
+        x = getRandomIntFromRange((particleRadius), (innerWidth-particleRadius));
+        y = getRandomIntFromRange((particleRadius), (innerHeight-particleRadius));
 
         // to give a random direction of travel, both axis must be independently calculated
         dx = (Math.random()-0.5)*velocityScale;
